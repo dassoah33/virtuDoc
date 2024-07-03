@@ -16,16 +16,6 @@
     <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <script src="assets/js/config.js"></script>
-    <style>
-        .bg-estiam{
-            background: #6a1b9a  !important;
-        }
-
-        .btn-estiam{
-            background: #6a1b9a  !important;
-            color: #ffffff !important;
-        }
-    </style>
 </head>
 
 <body class="bg-estiam d-flex justify-content-center align-items-center min-vh-100 p-5">
