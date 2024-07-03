@@ -16,7 +16,7 @@ class AuthController extends Controller
         $bgColor = '#D4ECFF';
         $title = 'Placez votre carte d’accès sur votre smartphone pour vous authentifier';
         $circlesColor = 'bleu';
-        $sessionCode = '0123';
+        $sessionCode = '0123'; // le code ici
 
         return view('auth.login_session_code', [
             'bgColor' => $bgColor,
