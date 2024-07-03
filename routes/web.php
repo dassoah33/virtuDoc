@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [AuthController::class, 'login'])->name('login');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/login/session', [AuthController::class, 'getSessionCode'])->name('login_session_code');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 

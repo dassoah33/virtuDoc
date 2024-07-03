@@ -21,12 +21,15 @@
     }
 </style>
 
-
 @section('content')
 <div class="row justify-content-center">
     <div class="col-xl-4 col-md-5">
         <h1 class="fw-bold text-center">Virtu Bank</h1>
-        <button id="createSession" class="btn btn-estiam w-100 mt-3 fw-bold text-uppercase">Se connecter</button>
+        <button id="createSession" class="btn btn-estiam w-100 mt-3 fw-bold text-uppercase" 
+            onclick="window.location='{{ route('login_session_code') }}'"
+        >
+            Se connecter
+        </button>
 
         <div class="mt-5 d-flex justify-content-between align-items-center">
             <a href="#" class="text-white text-decoration-underline">Première connexion</a>

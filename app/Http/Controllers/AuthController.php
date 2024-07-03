@@ -11,6 +11,21 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
+    public function getSessionCode()
+    {
+        $bgColor = '#D4ECFF';
+        $title = 'Placez votre carte d’accès sur votre smartphone pour vous authentifier';
+        $circlesColor = 'bleu';
+        $sessionCode = '0123';
+
+        return view('auth.login_session_code', [
+            'bgColor' => $bgColor,
+            'title' => $title,
+            'circlesColor' => $circlesColor,
+            'sessionCode' => $sessionCode,
+        ]);
+    }
+
     public function login_post(Request $request)
     {
         // Valider les entrées du formulaire
