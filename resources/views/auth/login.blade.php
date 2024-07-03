@@ -18,6 +18,7 @@
 
     h1 {
         font-size: calc(2rem + 2vw) !important;
+        color: #fff !important;
     }
 </style>
 
