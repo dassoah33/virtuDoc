@@ -30,7 +30,12 @@
     <div class="layout-wrapper">
 
         <!-- ========== Left Sidebar ========== -->
-        <div class="main-menu" style="background: #6a1b9a;">
+        <div class="main-menu" style="background: #FCFCFC;">
+            <a href="#">
+                <h1>Virtu Doc</h1>
+            </a>
+
+
             <!-- Brand Logo -->
             <div class="logo-box">
                 <!-- Brand Logo Light -->
