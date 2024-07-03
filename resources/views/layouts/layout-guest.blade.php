@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8" />
-    <title>Dashboard - Virtu Bank</title>
+    <title>Virtu Doc | Tableau de bord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Virtu Bank." name="description" />
     <meta content="Dassoah Maixent" name="author" />
