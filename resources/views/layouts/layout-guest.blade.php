@@ -46,6 +46,8 @@
             font-weight: normal;
         }
     </style>
+
+    @yield('extra-css')
 </head>
 <body>
 
@@ -63,22 +65,22 @@
             <!--- Menu -->
             <div>
                 <ul class="navbar-nav d-flex flex-column">
-                    <li class="nav-item menu-active ps-4 py-2">
+                    <li class="nav-item ps-4 py-2 {{ request()->routeIs('dashboard') ? 'menu-active' : '' }}">
                         <a class='nav-link' href="{{ route('dashboard') }}">
                             <i class="fas fa-home fa-lg me-2"></i>
                             <span class="fs-5">Dashboard</span>
                         </a>
                     </li>
-
-                    <li class="nav-item ps-4 py-2">
-                        <a class='nav-link' href={{ route('logs') }}>
+                    
+                    <li class="nav-item ps-4 py-2 {{ request()->routeIs('logs') ? 'menu-active' : '' }}">
+                        <a class='nav-link' href="{{ route('logs') }}">
                             <i class="fas fa-file-alt fa-lg me-2"></i>
                             <span class="fs-5">Logs des connexions</span>
                         </a>
                     </li>
                     
                     <li class="nav-item mt-auto ps-4 py-2">
-                        <a class='nav-link' href="#">
+                        <a class='nav-link' href="{{ route('logout') }}">
                             <i class="fas fa-power-off fa-lg me-2"></i>
                             <span class="fs-5">Se déconnecter</span>
                         </a>
@@ -144,5 +146,6 @@
     <!-- Dashboard init-->
     <script src="assets/js/pages/dashboard.js"></script>
 
+    @yield('extra-js')
 </body>
 </html>

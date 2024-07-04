@@ -5,6 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\ApiController;
+
+
+
+// Liste des API Endpoint
+Route::get('/check-session-status/{code}', [ApiController::class, 'checkSessionStatus']);
+
+Route::get('/check-session-status/{code}', [ApiController::class, 'checkSessionStatus']);
+
+Route::get('/update-session', [ApiController::class, 'updateSession']);
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 
