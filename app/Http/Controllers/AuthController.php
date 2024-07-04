@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Session;
 
 class AuthController extends Controller
 {
@@ -16,7 +17,14 @@ class AuthController extends Controller
         $bgColor = '#D4ECFF';
         $title = 'Placez votre carte d’accès sur votre smartphone pour vous authentifier';
         $circlesColor = 'bleu';
-        $sessionCode = '0123'; // le code ici
+        $sessionCode = mt_rand(1000,9999); // le code ici
+   
+        $session = Session::create([
+            'code' => $sessionCode,
+            'est_utilise' => false, 
+            'payload' => null,
+            'utilisateur_id' => null,
+        ]);
 
         return view('auth.login_session_code', [
             'bgColor' => $bgColor,
@@ -48,7 +56,14 @@ class AuthController extends Controller
         
     }
 
-    public function logout(){
-        return view('auth.login');
+    public function logout(Request $request){
+        if(session()->has('utilisateur')){
+            session()->pull('utilisateur');
+            $request->session()->flush();
+            return redirect('login')->with('success','Vous avez été déconnecté avec succès');
+        }
+
+        return redirect('login')->with('success','Vous avez été déconnecté avec succès');
     }
+
 }
