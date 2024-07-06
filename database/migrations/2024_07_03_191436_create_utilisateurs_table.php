@@ -25,10 +25,10 @@ return new class extends Migration
 
         // Insertion des données initiales
         DB::table('utilisateurs')->insert([
-            'prenom' => 'Dassoah',
-            'nom' => 'OKOUMOU',
+            'prenom' => 'John',
+            'nom' => 'Doe',
             'genre' => 'H',
-            'payload' => '3xFDw24GNmnJ2Gk65N2BBc7BS9LHM3c7r8V66Vmapjtk7z6t',
+            'payload' => 'eyJhbGciOiJlUzl1NilsInR5cCl6lkpXVCJ9.eyJzdWliOilxMjMONTY3ODkwliwibmFtZSl6lkpvaG4gRG9lliwiZW1haWwiOiJqb2huLmRvZUBlc3RpYWOuY29tliwiaWFOljoxNTE2MjM5MDlyLCJleHAiOjE3Mjc3NDA3OTksInJvbGUiOiJlbXBsb3lIZSJ9.CzHm8hILNQOnakPR-EMVwXlorMM0eUW15yxJCFICtXc',
             'date_de_naissance' => '1995-02-03', // Format YYYY-MM-DD
         ]);
         

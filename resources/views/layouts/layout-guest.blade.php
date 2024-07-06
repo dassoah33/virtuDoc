@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8" />
-    <title>Virtu Doc | Tableau de bord</title>
+    <title>COCTICODE | Tableau de bord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Virtu Bank." name="description" />
     <meta content="Dassoah Maixent" name="author" />
@@ -58,7 +58,7 @@
         <div style="z-index: 2; position: fixed; width: 250px; height: 100%; background: #FCFCFC;">
             <div class="logo-box py-5">
                 <a href="#">
-                    <h1 class="fw-bold">Virtu Doc</h1>
+                    <h1 class="fw-bold">Octicode </h1>
                 </a>
             </div>
 
@@ -71,11 +71,25 @@
                             <span class="fs-5">Dashboard</span>
                         </a>
                     </li>
+
+                    <li class="nav-item ps-4 py-2">
+                        <a class='nav-link' href="#">
+                            <i class="mdi mdi-ambulance fa-lg me-2"></i>
+                            <span class="fs-5">Carnet médical</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ps-4 py-2">
+                        <a class='nav-link' href="{{ route('docteurs') }}">
+                            <i class="mdi mdi-ambulance fa-lg me-2"></i>
+                            <span class="fs-5">Docteurs</span>
+                        </a>
+                    </li>
                     
                     <li class="nav-item ps-4 py-2 {{ request()->routeIs('logs') ? 'menu-active' : '' }}">
                         <a class='nav-link' href="{{ route('logs') }}">
                             <i class="fas fa-file-alt fa-lg me-2"></i>
-                            <span class="fs-5">Logs des connexions</span>
+                            <span class="fs-5">Historique de connexions</span>
                         </a>
                     </li>
                     
@@ -89,7 +103,7 @@
                     <li class="nav-item ps-4 py-2">
                         <a class='nav-link' href="#">
                             <i class="fas fa-circle-user fa-lg me-2"></i>
-                            <span class="fs-5">{{ $utilisateur->prenom }} {{ $utilisateur->nom }}</span>
+                            <span class="fs-5">Mon compte</span>
                         </a>
                     </li>
 

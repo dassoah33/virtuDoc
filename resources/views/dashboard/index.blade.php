@@ -19,16 +19,16 @@
 <!-- end page title -->
 
 <div class="row">
-    <div class="col-md-6 col-xl-3">
+    <div class="col-md-6 col-xl-4">
         <div class="card">
             <div class="card-body">
                 <div class="mb-4">
-                    <h5 class="card-title mb-0">Nombre d'utilisateurs</h5>
+                    <h5 class="card-title mb-0">Nombre de docteurs</h5>
                 </div>
                 <div class="row d-flex align-items-center mb-4">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center mb-0">
-                            25
+                            {{ $docteurs->count() }}
                         </h2>
                     </div>
                     <div class="col-4 text-end">
@@ -45,16 +45,16 @@
         </div><!-- end card-->
     </div> <!-- end col-->
 
-    <div class="col-md-6 col-xl-3">
+    <div class="col-md-6 col-xl-4">
         <div class="card">
             <div class="card-body">
                 <div class="mb-4">
-                    <h5 class="card-title mb-0">Nombre de virements</h5>
+                    <h5 class="card-title mb-0">Mes rendez-vous</h5>
                 </div>
                 <div class="row d-flex align-items-center mb-4">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center mb-0">
-                            40
+                            5
                         </h2>
                     </div>
                     <div class="col-4 text-end">
@@ -68,31 +68,9 @@
         </div><!-- end card-->
     </div> <!-- end col-->
 
-    <div class="col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="mb-4">
-                    {{-- <span class="badge badge-soft-primary float-end">Per Month</span> --}}
-                    <h5 class="card-title mb-0">Revenus</h5>
-                </div>
-                <div class="row d-flex align-items-center mb-4">
-                    <div class="col-8">
-                        <h2 class="d-flex align-items-center mb-0">
-                            8 000 €
-                        </h2>
-                    </div>
-                    <div class="col-4 text-end">
-                        <span class="text-muted"> <i class="mdi mdi-cash text-estiam" style="font-size: 25px;"></i></span>
-                    </div>
-                </div>
 
-            </div>
-            <!--end card body-->
-        </div>
-        <!--end card-->
-    </div> <!-- end col-->
 
-    <div class="col-md-6 col-xl-3">
+    <div class="col-md-6 col-xl-4">
         <div class="card">
             <div class="card-body">
                 <div class="mb-4">
@@ -102,11 +80,11 @@
                 <div class="row d-flex align-items-center mb-4">
                     <div class="col-8">
                         <h2 class="d-flex align-items-center mb-0">
-                            2
+                            {{ $logs }}
                         </h2>
                     </div>
                     <div class="col-4 text-end">
-                        <span class="text-muted"><i class="mdi mdi-arrow-down text-danger" style="font-size:25px;"></i></span>
+                        <span class="text-muted"><i class="fa fa-user text-danger" style="font-size:25px;"></i></span>
                     </div>
                 </div>
 
@@ -171,7 +149,7 @@
                     <div class="col">
                         <h4 class="card-title">Transactions sur l'année 2024</h4>
                         {{-- <p class="card-subtitle mb-4">Transaction period from 21 July to 25 Aug</p> --}}
-                        <h3>7841.12 €<span class="badge badge-soft-success float-end">+7.5%</span>
+                        <h3>784.12 €<span class="badge badge-soft-success float-end">+7.5%</span>
                         </h3>
                     </div>
                 </div> <!-- end row -->
