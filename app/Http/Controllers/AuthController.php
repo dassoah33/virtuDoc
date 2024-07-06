@@ -57,11 +57,11 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
-        if(session()->has('utilisateur')){
-            session()->pull('utilisateur');
-            $request->session()->flush();
-            return redirect('login')->with('success','Vous avez été déconnecté avec succès');
-        }
+        // if(session()->has('utilisateur')){
+        //     session()->pull('utilisateur');
+        //     $request->session()->flush();
+        //     return redirect('login')->with('success','Vous avez été déconnecté avec succès');
+        // }
 
         return redirect('login')->with('success','Vous avez été déconnecté avec succès');
     }
